@@ -1,0 +1,17 @@
+<setup>
+    <block title="Pushover Alerts">
+        <text>Configure Pushover Notifications</text>
+    </block>
+
+    <block title="API" endpoint="admin/alert_actions" entity="pushover">
+        <input field="param.api.app_token">
+            <label>App Token/Key</label>
+            <type>text</type>
+        </input>
+        <input field="param.api.user_token">
+            <label>User Token/Key</label>
+            <type>text</type>
+        </input>
+    </block>
+
+</setup>
