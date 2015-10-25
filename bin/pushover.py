@@ -33,7 +33,16 @@ if sys.argv[1] == "--execute":
 			pushover_payload.update({ "url_title": params['url_title']})
 
 		if 'priority' in params and params['priority'] != "":
-			pushover_payload.update({ "priority": str(params['priority'])})
+			if int(params['priority']) == 2:
+				if 'expire' in params and params['expire'] != "":
+					pushover_payload.update({ "retry": "30"})
+					pushover_payload.update({ "priority": str(params['priority'])})
+					pushover_payload.update({ "expire": str(params['expire'])})
+				else:
+					print >> sys.stderr, "FATAL Missing expire param, cannot send notification with emergency priority."
+					sys.exit(2)
+			else:
+				pushover_payload.update({ "priority": str(params['priority'])})
 
 		if 'timestamp' in params and params['timestamp'] != "":
 			pushover_payload.update({ "timestamp": params['timestamp']})
