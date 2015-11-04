@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+local/
+metadata/local.meta
+.DS_Store
+_work/
+*Test.py
+*.log
+dist/
+*.egg-info/
+.eggs/*
+*.egg
+MANIFEST
+RELEASE-VERSION
+.coverage
+nosetests.xml
