@@ -5,3 +5,5 @@ param.api.host = <string>
 param.api.ws = <string>
 param.api.app_token = <string>
 param.api.user_token = <string>
+param.priority = <string>
+param.sound = <string>
